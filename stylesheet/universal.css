@@ -1,0 +1,159 @@
+@font-face {
+    font-family:'source-code' ;
+    src: url(../fonts/SourceCodePro-Regular.ttf) ;
+}
+body{
+    background: black;
+    color: yellow;
+    line-height: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+/* Index, Universal */
+body#index-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#ascii-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+h1{
+    font-size: 50px;
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+    margin: 1em 0;
+    text-align: center;
+    width: 100%;
+    color: yellow;
+    letter-spacing: -2.5px;
+    font-family: 'source-code'; 
+}
+
+h3{
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    margin: 1em 0;
+    text-align: center;
+    font-family: 'source-code'
+}
+
+a{
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover{
+    background-color: yellow;
+    color: black;
+}
+
+a:visited{
+    text-decoration: inherit;
+}
+
+/* Article Content Style */
+body#article-style{
+    background: whitesmoke;
+    line-height: 15px;
+    margin: 0;
+    padding: 20px;
+}
+
+
+#article-style p{
+    max-width: 1100px;
+    color: blue;
+    position: relative;
+    left: 2;
+    /* text-align: center; */
+    word-wrap: break-word;
+    font-size: 40px;
+    font-family: 'source-code'; 
+    letter-spacing: -2px;
+    transition: line-height 0.5s ease, font-size 0.5s ease, letter-spacing 0.5s ease;
+}
+
+#article-style h2{
+    max-width: 1100px;
+    position: relative;
+    left: 1;
+    font-size: 70px;
+    color: blue;
+    font-family: 'source-code'; 
+    transition: line-height 0.5s ease, font-size 0.5s ease, letter-spacing 0.5s ease;
+}
+
+#article-style p:hover{
+    line-height: 35px;
+    background-color: blue;
+    color: whitesmoke;
+}
+
+#article-style h2:hover{
+    line-height: 60px;
+    background-color: blue;
+    color: whitesmoke;
+}
+
+#article-style a{
+    color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+#article-style a:hover{
+    color: whitesmoke;
+    background-color: blue;
+}
+
+.fade-out{
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+body.fade-in{
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
